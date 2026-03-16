@@ -129,12 +129,13 @@ img {
 }
 
 .brand img {
-  width: 112px;
+  width: 72px;
   height: auto;
+  flex: 0 0 auto;
 }
 
 .brand span {
-  font-size: 0.88rem;
+  font-size: 1.04rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -162,7 +163,7 @@ img {
   border: 2px solid rgba(32, 33, 36, 0.14);
   background: #fff;
   text-decoration: none;
-  font-size: 0.92rem;
+  font-size: 0.84rem;
   font-weight: 700;
   transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease;
 }
@@ -179,12 +180,16 @@ img {
 
 .date-chip {
   margin: 0;
-  padding: 0.8rem 1.15rem;
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
   background: var(--ink);
   color: #fff;
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.07em;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -283,7 +288,7 @@ h3 {
   background: linear-gradient(96deg, #ff4d36 0%, #ff8c17 18%, #ffd73c 36%, #73c94e 57%, #30b56b 74%, #4d8fe8 100%);
   color: #111111;
   overflow: hidden;
-  font-size: 0.96rem;
+  font-size: 0.88rem;
   font-weight: 800;
   text-decoration: none;
   letter-spacing: 0.08em;
@@ -597,14 +602,9 @@ h3 {
 }
 
 .format-heading h3 {
-  max-width: 15ch;
   font-size: clamp(1.16rem, 1.8vw, 1.55rem);
   line-height: 1.08;
   letter-spacing: -0.04em;
-}
-
-.format-wide .format-heading h3 {
-  max-width: 26ch;
 }
 
 .format-intro {
