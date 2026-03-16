@@ -3,232 +3,371 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f0f0f0" />
+    <meta name="theme-color" content="#b8e8ef" />
     <title>Tech Roulette: Build With AI | GDG on Campus IE University</title>
     <meta
       name="description"
       content="Tech Roulette: Build With AI 2-week challenge page with roadmap, wildcard format, winners, FAQ, and social links."
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260316" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="decor" aria-hidden="true">
-      <span class="shape capsule one"></span>
-      <span class="shape capsule two"></span>
-      <span class="shape capsule three"></span>
-      <span class="shape dot-row"></span>
-      <span class="shape ring"></span>
-      <span class="shape arrow"></span>
-      <span class="shape brace">{</span>
-      <span class="shape brace right">}</span>
-    </div>
+    <main id="main" class="page-shell">
+      <article class="poster">
+        <div class="color-bar" aria-hidden="true">
+          <span class="cb-blue"></span>
+          <span class="cb-red"></span>
+          <span class="cb-yellow"></span>
+          <span class="cb-green"></span>
+        </div>
 
-    <header class="topbar">
-      <div class="shell topbar-inner">
-        <a class="brand" href="#general" aria-label="Tech Roulette: Build With AI">
-          <img src="assets/logos/google-developers-wordmark.png" alt="Google Developers" width="150" height="73" />
-          <span>Tech Roulette: Build With AI</span>
-        </a>
+        <header class="poster-header">
+          <a class="brand" href="#general" aria-label="Tech Roulette: Build With AI">
+            <img src="assets/logos/google-developers-wordmark.png" alt="Google Developers" width="150" height="73" />
+            <span>GDG on Campus IE University</span>
+          </a>
 
-        <nav class="nav" aria-label="Main navigation">
-          <a href="#general">General Info</a>
-          <a href="#dates">Dates</a>
-          <a href="#faq">FAQ</a>
-          <a href="#social">Social</a>
-        </nav>
-      </div>
-    </header>
+          <nav class="nav" aria-label="Main navigation">
+            <a href="#general">General</a>
+            <a href="#dates">Dates</a>
+            <a href="#faq">FAQ</a>
+            <a href="#social">Social</a>
+            <a
+              class="apply-btn"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSde60O7PaBOo9sXh-u4qX9mjioX3gI3gm-5z7YdC5pEMZ3ehA/viewform"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Apply now
+              <span aria-hidden="true" class="apply-arrow"></span>
+            </a>
+          </nav>
 
-    <main id="main" class="shell frame">
-      <section id="general" class="panel general" aria-labelledby="general-title">
-        <div>
-          <p class="eyebrow">#GDGOnCampus</p>
-          <h1 id="general-title">Tech Roulette: Build With AI</h1>
-          <p class="lead">
-            A 2-week build challenge where teams create intentionally "useless" but technically solid AI projects
-            around a random wildcard theme.
-          </p>
+          <p class="date-chip">Apr 13-27, 2026</p>
+        </header>
 
-          <ul class="facts" aria-label="General event info">
-            <li><strong>Dates:</strong> April 13-27</li>
-            <li><strong>Format:</strong> 2-week challenge</li>
-            <li><strong>Team size:</strong> 3-4 participants</li>
-            <li><strong>Participants:</strong> 50-100 expected</li>
-          </ul>
+        <section id="general" class="hero" aria-labelledby="general-title">
+          <div class="hero-copy">
+            <p class="eyebrow">Build With AI · Spring 2026</p>
+            <h1 id="general-title" class="hero-title">
+              <span>Tech</span>
+              <span class="roulette-title">Roulette</span>
+              <span>Challenge</span>
+            </h1>
+            <p class="lead">
+              A 2-week build challenge where teams create intentionally "useless" but technically sharp AI projects
+              around a random wildcard theme.
+            </p>
 
-          <section class="wildcard-showcase" aria-label="Wildcard format details">
-            <article class="wild-card wheel">
-              <p class="mini-title">The Wildcard Wheel</p>
-              <p>
-                Each team spins once and gets a random app topic. It is a theme constraint only. Teams choose any
-                stack and build with full technical freedom.
+            <ul class="facts" aria-label="General event info">
+              <li>
+                <span class="fact-label">Dates</span>
+                <strong>April 13-27</strong>
+              </li>
+              <li>
+                <span class="fact-label">Format</span>
+                <strong>2-week challenge</strong>
+              </li>
+              <li>
+                <span class="fact-label">Team size</span>
+                <strong>3-4 participants</strong>
+              </li>
+              <li>
+                <span class="fact-label">Participants</span>
+                <strong>50-100 expected</strong>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-side">
+            <section class="hero-summary" aria-label="Event summary">
+              <div class="brand-lockup">
+                <div class="brand-mark">
+                  <img
+                    src="assets/logos/gdg-on-campus-full-white-filled.png"
+                    alt="GDG on Campus IE University"
+                    width="260"
+                    height="112"
+                  />
+                </div>
+
+                <div class="summary-copy">
+                  <p class="mini-title">Event flow</p>
+                  <ul class="summary-list">
+                    <li>Spin a wildcard topic at kickoff.</li>
+                    <li>Build something strange but technically real.</li>
+                    <li>Present it live on final demo day.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="summary-note">
+                <p class="mini-title">Winning paths</p>
+                <p>Best Presentation and Idea or Best Developed Solution.</p>
+                <a
+                  class="apply-btn apply-btn-large"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSde60O7PaBOo9sXh-u4qX9mjioX3gI3gm-5z7YdC5pEMZ3ehA/viewform"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Apply now
+                  <span aria-hidden="true" class="apply-arrow"></span>
+                </a>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section id="format" class="panel format-panel" aria-labelledby="format-title">
+          <div class="section-head">
+            <p class="section-kicker">Challenge format</p>
+            <h2 id="format-title">Wildcard format details</h2>
+            <p class="section-copy">How teams get their prompt, how winners are judged, and how solo builders are placed.</p>
+          </div>
+
+          <div class="format-layout">
+            <article class="format-feature format-blue">
+              <div class="format-card-top">
+                <p class="format-chip">Kickoff mechanic</p>
+                <p class="format-index" aria-hidden="true">01</p>
+              </div>
+
+              <div class="format-heading">
+                <h3>Every team gets one random theme, then builds their own interpretation.</h3>
+              </div>
+
+              <p class="format-intro">
+                The wheel decides the creative constraint, not the stack. Teams can still choose the tools, technical scope,
+                and level of ambition that fits their idea.
               </p>
-            </article>
 
-            <article class="wild-card winners">
-              <p class="mini-title">Winner Categories</p>
-              <ul>
+              <ul class="format-list format-list-split" aria-label="Wildcard wheel details">
                 <li>
-                  <strong>Best Presentation and Idea</strong>
-                  <span>Creative concept plus polished absurdity.</span>
+                  <strong>Spin once</strong>
+                  <span>Each team gets a single live draw at kickoff.</span>
                 </li>
                 <li>
-                  <strong>Best Developed Solution</strong>
-                  <span>Clean execution and strong technical mastery.</span>
+                  <strong>Build freely</strong>
+                  <span>The topic is a theme only, not a product or architecture prescription.</span>
                 </li>
               </ul>
             </article>
 
-            <article class="wild-card teams">
-              <p class="mini-title">Team Composition</p>
-              <p>
-                Teams can mix CS, business, design, and beginner talent. Solo participants are matched at kickoff.
-                Everyone ships a live project and a story worth telling.
-              </p>
+            <div class="format-stack">
+              <article class="format-card format-yellow">
+                <div class="format-card-top">
+                  <p class="format-chip">Judging</p>
+                  <p class="format-index" aria-hidden="true">02</p>
+                </div>
+
+                <div class="format-heading">
+                  <h3>Two ways to win, depending on whether the edge is concept or execution.</h3>
+                </div>
+
+                <ol class="format-list" aria-label="Winner categories">
+                  <li>
+                    <strong>Best Presentation and Idea</strong>
+                    <span>Creative concept, polished absurdity, and a memorable pitch.</span>
+                  </li>
+                  <li>
+                    <strong>Best Developed Solution</strong>
+                    <span>Strong build quality, clean execution, and technical mastery.</span>
+                  </li>
+                </ol>
+              </article>
+            </div>
+
+            <article class="format-card format-green format-wide">
+              <div class="format-card-top">
+                <p class="format-chip">Team setup</p>
+                <p class="format-index" aria-hidden="true">03</p>
+              </div>
+
+              <div class="format-heading">
+                <h3>Mixed-skill teams are encouraged, and solo participants are matched at kickoff.</h3>
+              </div>
+
+              <ul class="format-list format-list-split" aria-label="Team composition rules">
+                <li>
+                  <strong>Balanced teams</strong>
+                  <span>Best mix: CS, business, design, and beginner talent in the same group.</span>
+                </li>
+                <li>
+                  <strong>Solo participants</strong>
+                  <span>Anyone joining alone is grouped into a team during the opening session.</span>
+                </li>
+              </ul>
             </article>
+          </div>
+        </section>
+
+        <section id="dates" class="panel schedule-panel" aria-labelledby="dates-title">
+          <div class="section-head">
+            <h2 id="dates-title">Roadmap: April 13-27</h2>
+            <p class="section-copy">Five checkpoints across the kickoff, sprint weeks, mid-point review, and final demo.</p>
+          </div>
+
+          <div class="roadmap-vertical" aria-label="Hackathon roadmap timeline">
+            <article class="roadmap-day node-blue" aria-labelledby="day1-title">
+              <div class="roadmap-date-block">
+                <p class="day-label">Sunday</p>
+                <p class="day-date">Apr 13</p>
+              </div>
+              <div class="roadmap-content">
+                <div class="event-head">
+                  <time class="time-chip" datetime="2026-04-13">Kickoff Event</time>
+                  <h3 id="day1-title">Team formation, wheel spinning and workshops</h3>
+                </div>
+                <p><strong>Venue:</strong> IE University.</p>
+              </div>
+            </article>
+
+            <article class="roadmap-day node-green" aria-labelledby="day2-title">
+              <div class="roadmap-date-block">
+                <p class="day-label">Week 1</p>
+                <p class="day-date">Apr 14-19</p>
+              </div>
+              <div class="roadmap-content">
+                <div class="event-head">
+                  <time class="time-chip" datetime="2026-04-14/2026-04-19">Build Sprint 1</time>
+                  <h3 id="day2-title">Optional evening workshops, mentor office hours and async building</h3>
+                </div>
+                <p><strong>Venue:</strong> Distributed / async.</p>
+              </div>
+            </article>
+
+            <article class="roadmap-day node-yellow" aria-labelledby="day3-title">
+              <div class="roadmap-date-block">
+                <p class="day-label">Sunday</p>
+                <p class="day-date">Apr 20</p>
+              </div>
+              <div class="roadmap-content">
+                <div class="event-head">
+                  <time class="time-chip" datetime="2026-04-20">Mid-Point Check-In</time>
+                  <h3 id="day3-title">Progress demos, feedback and blockers session</h3>
+                </div>
+                <p><strong>Venue:</strong> IE venue or online.</p>
+              </div>
+            </article>
+
+            <article class="roadmap-day node-blue" aria-labelledby="day4-title">
+              <div class="roadmap-date-block">
+                <p class="day-label">Week 2</p>
+                <p class="day-date">Apr 21-26</p>
+              </div>
+              <div class="roadmap-content">
+                <div class="event-head">
+                  <time class="time-chip" datetime="2026-04-21/2026-04-26">Build Sprint 2</time>
+                  <h3 id="day4-title">Final sprint with continued workshops</h3>
+                </div>
+                <p><strong>Milestone:</strong> Code freeze at 12:00 on Apr 27.</p>
+              </div>
+            </article>
+
+            <article class="roadmap-day node-red" aria-labelledby="day5-title">
+              <div class="roadmap-date-block">
+                <p class="day-label">Sunday</p>
+                <p class="day-date">Apr 27</p>
+              </div>
+              <div class="roadmap-content">
+                <div class="event-head">
+                  <time class="time-chip" datetime="2026-04-27">Final Event</time>
+                  <h3 id="day5-title">Presentations, judging and awards ceremony</h3>
+                </div>
+                <p><strong>Venue:</strong> Google or external venue.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <div class="lower-grid">
+          <section id="faq" class="panel" aria-labelledby="faq-title">
+            <div class="section-head">
+              <h2 id="faq-title">Frequently asked questions</h2>
+            </div>
+
+            <div class="faq-list">
+              <details>
+                <summary>Do I need a team before kickoff?</summary>
+                <p>No. Solo participants are matched with others at the Day 1 kickoff.</p>
+              </details>
+              <details>
+                <summary>Can we pick any tech stack?</summary>
+                <p>Yes. The wildcard is a theme, not a technical requirement, so teams choose their own stack.</p>
+              </details>
+              <details>
+                <summary>Who should participate?</summary>
+                <p>Mixed teams work best: CS, business, design, and curious beginners are all welcome.</p>
+              </details>
+              <details>
+                <summary>What does "winning" mean here?</summary>
+                <p>
+                  Teams can win for creative presentation and idea quality, or for strongest technical execution and code
+                  quality.
+                </p>
+              </details>
+            </div>
+          </section>
+
+          <section id="social" class="panel" aria-labelledby="social-title">
+            <div class="section-head">
+              <h2 id="social-title">Stay connected</h2>
+            </div>
+
+            <p class="section-copy">Follow updates, ask questions, and coordinate with mentors and teams in real time.</p>
+
+            <div class="social-links" aria-label="Social media and community links">
+              <a class="social-card social-red" href="https://instagram.com/gdg_ie_university" rel="noreferrer">
+                <span>Instagram</span>
+                <small>@gdg_ie</small>
+              </a>
+              <a class="social-card social-blue" href="https://www.linkedin.com/company/gdg-ie-university/" rel="noreferrer">
+                <span>LinkedIn</span>
+                <small>GDG IE University</small>
+              </a>
+              <a class="social-card social-green" href="https://discord.gg/gdg-ie-hackathon" rel="noreferrer">
+                <span>Discord</span>
+                <small>Join server</small>
+              </a>
+            </div>
+          </section>
+
+          <section id="apply" class="panel apply-panel" aria-label="Apply for Tech Roulette">
+            <a
+              class="apply-btn apply-btn-large apply-panel-button"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSde60O7PaBOo9sXh-u4qX9mjioX3gI3gm-5z7YdC5pEMZ3ehA/viewform"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Apply now
+              <span aria-hidden="true" class="apply-arrow"></span>
+            </a>
           </section>
         </div>
 
-        <div class="general-brand" aria-label="Event branding">
-          <img src="assets/logos/gdg-on-campus-white.png" alt="GDG on Campus IE University logo" width="260" height="260" />
-        </div>
-      </section>
-
-      <section id="dates" class="panel" aria-labelledby="dates-title">
-        <div class="section-head">
-          <p class="eyebrow">Dates</p>
-          <h2 id="dates-title">Roadmap: April 13-27</h2>
-        </div>
-        <div class="roadmap-vertical" aria-label="Hackathon roadmap timeline">
-          <p class="week-divider"><span>Week 1</span></p>
-
-          <article class="roadmap-day node-blue" aria-labelledby="day1-label">
-            <p id="day1-label" class="day-label">Sunday · Apr 13</p>
-            <ol class="day-events">
-              <li>
-                <div class="event-head">
-                  <time class="time-chip" datetime="2026-04-13">Kickoff Event</time>
-                  <h4>Team formation, wheel spinning and workshops</h4>
-                </div>
-                <p><strong>Venue:</strong> IE University.</p>
-              </li>
-            </ol>
-          </article>
-
-          <article class="roadmap-day node-green" aria-labelledby="day3-label">
-            <p id="day3-label" class="day-label">Apr 14-19</p>
-            <ol class="day-events">
-              <li>
-                <div class="event-head">
-                  <time class="time-chip" datetime="2026-04-14/2026-04-19">Build Sprint 1</time>
-                  <h4>Optional evening workshops, mentor office hours and async building</h4>
-                </div>
-                <p><strong>Venue:</strong> Distributed / async.</p>
-              </li>
-            </ol>
-          </article>
-
-          <article class="roadmap-day node-yellow" aria-labelledby="day5-label">
-            <p id="day5-label" class="day-label">Sunday · Apr 20</p>
-            <ol class="day-events">
-              <li>
-                <div class="event-head">
-                  <time class="time-chip" datetime="2026-04-20">Mid-Point Check-In</time>
-                  <h4>Progress demos, feedback and blockers session</h4>
-                </div>
-                <p><strong>Venue:</strong> IE venue or online.</p>
-              </li>
-            </ol>
-          </article>
-
-          <p class="week-divider"><span>Week 2</span></p>
-
-          <article class="roadmap-day node-blue" aria-labelledby="day8-label">
-            <p id="day8-label" class="day-label">Apr 21-26</p>
-            <ol class="day-events">
-              <li>
-                <div class="event-head">
-                  <time class="time-chip" datetime="2026-04-21/2026-04-26">Build Sprint 2</time>
-                  <h4>Final sprint with continued workshops</h4>
-                </div>
-                <p><strong>Milestone:</strong> Code freeze at 12:00 on Apr 27.</p>
-              </li>
-            </ol>
-          </article>
-
-          <article class="roadmap-day node-red" aria-labelledby="day10-label">
-            <p id="day10-label" class="day-label">Sunday · Apr 27</p>
-            <ol class="day-events">
-              <li>
-                <div class="event-head">
-                  <time class="time-chip" datetime="2026-04-27">Final Event</time>
-                  <h4>Presentations, judging and awards ceremony</h4>
-                </div>
-                <p><strong>Venue:</strong> Google or external venue.</p>
-              </li>
-            </ol>
-          </article>
-        </div>
-      </section>
-
-      <section id="faq" class="panel" aria-labelledby="faq-title">
-        <div class="section-head">
-          <p class="eyebrow">FAQ</p>
-          <h2 id="faq-title">Frequently asked questions</h2>
-        </div>
-
-        <div class="faq-list">
-          <details>
-            <summary>Do I need a team before kickoff?</summary>
-            <p>No. Solo participants are matched with others at the Day 1 kickoff.</p>
-          </details>
-          <details>
-            <summary>Can we pick any tech stack?</summary>
-            <p>Yes. The wildcard is a theme, not a technical requirement, so teams choose their own stack.</p>
-          </details>
-          <details>
-            <summary>Who should participate?</summary>
-            <p>Mixed teams work best: CS, business, design, and curious beginners are all welcome.</p>
-          </details>
-          <details>
-            <summary>What does "winning" mean here?</summary>
-            <p>
-              Teams can win for creative presentation and idea quality, or for strongest technical execution and code
-              quality.
-            </p>
-          </details>
-        </div>
-      </section>
-
-      <section id="social" class="panel" aria-labelledby="social-title">
-        <div class="section-head">
-          <p class="eyebrow">Social</p>
-          <h2 id="social-title">Stay connected</h2>
-        </div>
-
-        <p class="social-copy">Follow updates, ask questions, and coordinate with mentors and teams in real time.</p>
-
-        <div class="social-links" aria-label="Social media and community links">
-          <a href="https://instagram.com/gdg_ie_university" rel="noreferrer">
-            <span>Instagram</span>
-            <small>@gdg_ie</small>
-          </a>
-          <a href="https://www.linkedin.com/company/gdg-ie-university/" rel="noreferrer">
-            <span>LinkedIn</span>
-            <small>GDG IE University</small>
-          </a>
-          <a href="https://discord.gg/gdg-ie-hackathon" rel="noreferrer">
-            <span>Discord</span>
-            <small>Join server</small>
-          </a>
-        </div>
-      </section>
+        <footer class="poster-footer">
+          <p>Tech Roulette · IE University · Wildcard topics are assigned live at kickoff.</p>
+        </footer>
+      </article>
     </main>
+
     <script>
       (() => {
         const faqItems = document.querySelectorAll("#faq .faq-list details");
+        const applyButtons = document.querySelectorAll(".apply-btn, .roulette-title");
 
         faqItems.forEach((item) => {
           item.addEventListener("toggle", () => {
@@ -239,6 +378,22 @@
                 otherItem.open = false;
               }
             });
+          });
+        });
+
+        applyButtons.forEach((button) => {
+          button.addEventListener("mousemove", (event) => {
+            const bounds = button.getBoundingClientRect();
+            const x = ((event.clientX - bounds.left) / bounds.width) * 100;
+            const y = ((event.clientY - bounds.top) / bounds.height) * 100;
+
+            button.style.setProperty("--mouse-x", `${x}%`);
+            button.style.setProperty("--mouse-y", `${y}%`);
+          });
+
+          button.addEventListener("mouseleave", () => {
+            button.style.setProperty("--mouse-x", "50%");
+            button.style.setProperty("--mouse-y", "50%");
           });
         });
       })();
