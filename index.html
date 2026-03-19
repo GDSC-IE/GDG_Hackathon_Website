@@ -364,6 +364,10 @@
       (() => {
         const faqItems = document.querySelectorAll("#faq .faq-list details");
         const applyButtons = document.querySelectorAll(".apply-btn, .roulette-title");
+        const applyPanelButton = document.querySelector(".apply-panel-button");
+        const floatingApplyOverlay = document.querySelector(".apply-overlay");
+        const applySection = document.querySelector("#apply");
+        const applyPanel = document.querySelector(".apply-panel");
 
         faqItems.forEach((item) => {
           item.addEventListener("toggle", () => {
@@ -392,6 +396,96 @@
             button.style.setProperty("--mouse-y", "50%");
           });
         });
+
+        if (applySection && applyPanelButton && floatingApplyOverlay) {
+          let isDocked = false;
+          let pendingReveal = null;
+          let rafId = 0;
+          let observer = null;
+
+          const resetOverlayPose = () => {
+            floatingApplyOverlay.classList.remove("apply-overlay--docked");
+            floatingApplyOverlay.style.setProperty("--morph-translate-x", "0px");
+            floatingApplyOverlay.style.setProperty("--morph-translate-y", "0px");
+            floatingApplyOverlay.style.setProperty("--morph-scale-x", "1");
+            floatingApplyOverlay.style.setProperty("--morph-scale-y", "1");
+          };
+
+          const computeTargetSize = () => {
+            const computedStyle = window.getComputedStyle(applyPanelButton);
+            const rect = applyPanelButton.getBoundingClientRect();
+            const styleWidth = parseFloat(computedStyle.width) || 0;
+            const styleHeight = parseFloat(computedStyle.minHeight) || 78;
+
+            return {
+              width: Math.max(rect.width, styleWidth, 1),
+              height: Math.max(rect.height, styleHeight, 1),
+            };
+          };
+
+          const syncDockTransform = () => {
+            if (!isDocked) return;
+
+            const overlayRect = floatingApplyOverlay.getBoundingClientRect();
+            const buttonRect = applyPanelButton.getBoundingClientRect();
+            const size = computeTargetSize();
+
+            floatingApplyOverlay.style.setProperty("--morph-translate-x", `${buttonRect.left - overlayRect.left}px`);
+            floatingApplyOverlay.style.setProperty("--morph-translate-y", `${buttonRect.top - overlayRect.top}px`);
+            floatingApplyOverlay.style.setProperty("--morph-scale-x", `${size.width / overlayRect.width}`);
+            floatingApplyOverlay.style.setProperty("--morph-scale-y", `${size.height / overlayRect.height}`);
+          };
+
+          const setDockState = (shouldDock) => {
+            if (shouldDock === isDocked) return;
+            isDocked = shouldDock;
+
+            if (pendingReveal) {
+              window.clearTimeout(pendingReveal);
+              pendingReveal = null;
+            }
+
+            if (!shouldDock) {
+              applyPanelButton.classList.remove("apply-panel-button--visible");
+              if (applyPanel) applyPanel.classList.remove("apply-panel--visible");
+              resetOverlayPose();
+              return;
+            }
+
+            syncDockTransform();
+            floatingApplyOverlay.classList.add("apply-overlay--docked");
+            pendingReveal = window.setTimeout(() => {
+              applyPanelButton.classList.add("apply-panel-button--visible");
+              if (applyPanel) applyPanel.classList.add("apply-panel--visible");
+            }, 110);
+          };
+
+          const handleDockMotion = () => {
+            if (!isDocked) return;
+            if (rafId) window.cancelAnimationFrame(rafId);
+            rafId = window.requestAnimationFrame(syncDockTransform);
+          };
+
+          const initialButtonVisible = applySection.getBoundingClientRect().top < window.innerHeight && applySection.getBoundingClientRect().bottom > 0;
+          setDockState(initialButtonVisible);
+
+          observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.target !== applySection) return;
+                setDockState(entry.isIntersecting);
+              });
+            },
+            {
+              threshold: 0,
+            },
+          );
+
+          observer.observe(applySection);
+          window.addEventListener("scroll", handleDockMotion, { passive: true });
+          window.addEventListener("resize", handleDockMotion, { passive: true });
+          window.addEventListener("load", handleDockMotion, { passive: true });
+        }
       })();
     </script>
   </body>

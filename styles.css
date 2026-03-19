@@ -509,6 +509,22 @@ h3 {
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 16px 40px rgba(32, 33, 36, 0.18);
   backdrop-filter: blur(10px);
+  --morph-translate-x: 0px;
+  --morph-translate-y: 0px;
+  --morph-scale-x: 1;
+  --morph-scale-y: 1;
+  --morph-radius: 22px;
+  --morph-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translate3d(var(--morph-translate-x), var(--morph-translate-y), 0) scale(var(--morph-scale-x), var(--morph-scale-y));
+  border-radius: var(--morph-radius);
+  transition:
+    transform 300ms var(--morph-ease),
+    opacity 220ms ease,
+    border-radius 300ms var(--morph-ease),
+    box-shadow 260ms var(--morph-ease),
+    background-color 220ms ease,
+    backdrop-filter 220ms ease;
+  will-change: transform, opacity;
 }
 
 .apply-overlay-title {
@@ -518,9 +534,27 @@ h3 {
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  transition:
+    opacity 220ms var(--morph-ease),
+    transform 220ms var(--morph-ease);
+}
+
+.apply-overlay--docked {
+  --morph-radius: 999px;
+  opacity: 0;
+  box-shadow: 0 8px 24px rgba(32, 33, 36, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+  pointer-events: none;
+}
+
+.apply-overlay--docked .apply-overlay-button,
+.apply-overlay--docked .apply-overlay-title {
+  opacity: 0;
+  transform: translateY(-4px) scale(0.96);
 }
 
 .apply-overlay-button {
+  transition: opacity 220ms var(--morph-ease), transform 220ms var(--morph-ease);
   width: 100%;
   min-height: 62px;
   justify-content: center;
@@ -727,11 +761,50 @@ h3 {
   display: grid;
   place-items: center;
   grid-column: 1 / -1;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(10px) scaleY(0.96);
+  transform-origin: top center;
+  clip-path: inset(0 0 100% 0);
+  pointer-events: none;
+  visibility: hidden;
+  transition:
+    opacity 220ms var(--morph-ease) 110ms,
+    transform 240ms var(--morph-ease) 110ms,
+    clip-path 240ms var(--morph-ease) 110ms,
+    visibility 0s linear 260ms;
+}
+
+.apply-panel--visible {
+  opacity: 1;
+  transform: translateY(0);
+  clip-path: inset(0 0 0 0);
+  pointer-events: auto;
+  visibility: visible;
 }
 
 .apply-panel-button {
   width: 100%;
   margin-top: 0;
+  opacity: 0;
+  min-height: 78px;
+  overflow: hidden;
+  transform: translateY(8px);
+  pointer-events: none;
+  visibility: hidden;
+  transition:
+    opacity 200ms var(--morph-ease) 110ms,
+    transform 220ms var(--morph-ease) 110ms,
+    visibility 0s linear 260ms;
+}
+
+.apply-panel-button--visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  visibility: visible;
+  min-height: 78px;
+  transition-delay: 0s, 0s, 0s;
 }
 
 .section-head {
