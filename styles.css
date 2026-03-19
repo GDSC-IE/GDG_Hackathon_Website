@@ -201,7 +201,7 @@ img {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
   gap: 1.4rem;
-  align-items: stretch;
+  align-items: start;
 }
 
 .hero-copy {
@@ -209,6 +209,9 @@ img {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  max-width: min(100%, 56ch);
+  margin-inline: auto;
+  transform: translateX(0.35rem);
 }
 
 .eyebrow,
